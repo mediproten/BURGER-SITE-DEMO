@@ -24,6 +24,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/mobile-menu.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/loader.css" />
   </head>
@@ -48,23 +49,36 @@
         <div class="loader-subtext">Preparing delicious meals...</div>
       </div>
     </div>
+
+    
     <!-- ===== HEADER ===== -->
-    <header class="header" id="header">
-      <div class="container">
-        <!-- ===== NAVBAR ===== -->
-        <nav class="navbar">
-          <div class="logo-box">
-            <h2 class="logo-text">BURGER</h2>
-            <i class="fas fa-hamburger logo-icon"></i>
-          </div>
-          <ul class="menu-list">
-            <li><a href="index.html" class="active">HOME</a></li>
-            <li><a href="html/about.html">ABOUT</a></li>
-            <li><a href="html/menu.html">MENU</a></li>
-            <li><a href="html/contact.html">CONTACT</a></li>
-          </ul>
-          <a href="html/menu.html" class="order-button">BUY NOW</a>
-        </nav>
+   <header class="header" id="header">
+        <div class="container">
+            <!-- ===== NAVBAR (یکبار) ===== -->
+            <nav class="navbar">
+                <div class="logo-box">
+                    <h2 class="logo-text">BURGER</h2>
+                    <i class="fas fa-hamburger logo-icon"></i>
+                </div>
+
+                <!-- دکمه همبرگری (فقط در موبایل) -->
+                <div class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- منو -->
+                <ul class="menu-list" id="menuList">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="html/about.html">ABOUT</a></li>
+                    <li><a href="html/menu.html">MENU</a></li>
+                    <li><a href="html/contact.html">CONTACT</a></li>
+                    <li><a href="html/menu.html" class="order-button-mobile">BUY NOW</a></li>
+                </ul>
+
+                <a href="html/menu.html" class="order-button">BUY NOW</a>
+            </nav>
 
         <!-- ===== HERO ===== -->
         <section class="hero">
@@ -429,5 +443,6 @@
       </div>
     </footer>
     <script src="script/loader.js"></script>
+    <script src="script/mobile-menu.js"></script>
   </body>
 </html>

@@ -17,6 +17,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/mobile-menu.css">
     <link rel="stylesheet" href="../css/about.css" />
     <link rel="stylesheet" href="../css/loader.css">
 </head>
@@ -47,21 +48,33 @@
     <img class="main-bg" src="../asesst/imgs/BG-about(2).jpg" alt="Background" />
 
     <!-- ===== HEADER ===== -->
-    <header class="header" id="header">
+    <!-- ===== HEADER ===== -->
+   <header class="header" id="header">
         <div class="container">
-            <!-- ===== NAVBAR ===== -->
+            <!-- ===== NAVBAR (یکبار) ===== -->
             <nav class="navbar">
                 <div class="logo-box">
                     <h2 class="logo-text">BURGER</h2>
                     <i class="fas fa-hamburger logo-icon"></i>
                 </div>
-                <ul class="menu-list">
-                    <li><a href="../index.html">HOME</a></li>
-                    <li><a href="about.html" class="active">ABOUT</a></li>
+
+                <!-- دکمه همبرگری (فقط در موبایل) -->
+                <div class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- منو -->
+                <ul class="menu-list" id="menuList">
+                    <li><a href="../index.html" >HOME</a></li>
+                    <li ><a class="active" href="about.html">ABOUT</a></li>
                     <li><a href="menu.html">MENU</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="menu.html" class="order-button-mobile">BUY NOW</a></li>
                 </ul>
-                <a href="../html/menu.html" class="order-button">BUY NOW</a>
+
+                <a href="html/menu.html" class="order-button">BUY NOW</a>
             </nav>
         </div>
     </header>
@@ -114,5 +127,6 @@
         </section>
     </main>
     <script src="../script/loader.js"></script>
+    <script src="../script/mobile-menu.js"></script>
 </body>
 </html>
