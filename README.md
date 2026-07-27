@@ -15,7 +15,7 @@ Versel : https://burger-site-eight.vercel.app
 
 ## 📸 پیش‌نمایش
 
-![Burger House Preview](asesst/imgs/Readme-img.jpg)
+![Burger House Preview](asesst/imgs/Readme-img.png)
 
 ## ✨ ویژگی‌ها
 
