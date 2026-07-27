@@ -1,8 +1,8 @@
 # 🍔 BURGER HOUSE - فروشگاه آنلاین همبرگر
 لینک سایت
-Git hub pages : https://mediproten.github.io/BURGER-SITE-DEMO/
+Git hub pages : https://mediproten.github.io/BURGER-SITE-DEMO
 
-Versel : https://burger-site-eight.vercel.app/
+Versel : https://burger-site-eight.vercel.app
 
 
 
