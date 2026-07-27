@@ -43,4 +43,3 @@ Versel : https://burger-site-eight.vercel.app
 | GitHub Pages | هاستینگ استاتیک |
 | Vercel | دیپلوی سریع |
 
-## 📂 ساختار پروژه
