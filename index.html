@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger Website</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="asesst/imgs/logo.png" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts (یکبار لینک شده) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Gloria+Hallelujah&family=Gochi+Hand&family=Kavoon&family=Kranky&family=Lilita+One&family=Londrina+Solid:wght@100;300;400;900&family=Playpen+Sans:wght@100..800&family=Rock+Salt&family=Short+Stack&family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+  </head>
+  <body>
+    <!-- ===== LOADER ===== -->
+    <div class="loader-wrapper" id="loader">
+      <div class="loader">
+        <div class="loader-burger">
+          <i class="fas fa-hamburger"></i>
+        </div>
+        <div class="loader-text">BURGER <span>HOUSE</span></div>
+        <div class="loader-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="loader-progress">
+          <div class="loader-progress-bar"></div>
+        </div>
+        <div class="loader-subtext">Preparing delicious meals...</div>
+      </div>
+    </div>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+      <div class="container">
+        <!-- ===== NAVBAR ===== -->
+        <nav class="navbar">
+          <div class="logo-box">
+            <h2 class="logo-text">BURGER</h2>
+            <i class="fas fa-hamburger logo-icon"></i>
+          </div>
+          <ul class="menu-list">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="html/about.html">ABOUT</a></li>
+            <li><a href="html/menu.html">MENU</a></li>
+            <li><a href="html/contact.html">CONTACT</a></li>
+          </ul>
+          <a href="html/menu.html" class="order-button">BUY NOW</a>
+        </nav>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+          <div class="hero-text">
+            <p class="small-title">Are you hungry?</p>
+            <h1 class="main-title">
+              GAME NIGHT?<br />
+              WORKING LATE?<br />
+              ORDER NOW!
+            </h1>
+            <a href="html/menu.html" class="order-button">GO TO MENU</a>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <!-- ===== FOOD CATEGORY ===== -->
+    <section class="food-category">
+      <div class="food-category-card">
+        <img src="asesst/imgs/category-01.png" alt="Burger" />
+        <h3>BURGER</h3>
+      </div>
+      <div class="food-category-card">
+        <img src="asesst/imgs/category-02.png" alt="Sub Sandwich" />
+        <h3>SUB SANDWICHES</h3>
+      </div>
+      <div class="food-category-card">
+        <img src="asesst/imgs/category-03.png" alt="Croissant" />
+        <h3>CROISSANT</h3>
+      </div>
+      <div class="food-category-card">
+        <img src="asesst/imgs/category-04.png" alt="French Fries" />
+        <h3>FRENCH FRIES</h3>
+      </div>
+    </section>
+
+    <!-- ===== SPECIAL FOODS ===== -->
+    <section class="special-food">
+      <div class="special-food-container">
+        <!-- Left Card -->
+        <article class="special-card large-card">
+          <img src="asesst/imgs/special-01.jpg" alt="Special Burger" />
+          <div class="special-content">
+            <h2>
+              MEET, EAT & <br />
+              ENJOY THE <br />
+              TRUE TASTE
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              molestias a nesciunt omnis, dolor libero ducimus eos earum nemo
+              cum.
+            </p>
+            <span class="price">$9.45</span>
+            <a href="menu.html" class="menu-btn">GO TO MENU</a>
+          </div>
+        </article>
+        <!-- Right Cards -->
+        <div class="special-right">
+          <article class="special-card small-card">
+            <img src="asesst/imgs/special-02.jpg" alt="Burger" />
+            <div class="special-content">
+              <h2>
+                MEET, EAT & <br />
+                ENJOY THE
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                molestias a nesciunt.
+              </p>
+              <span class="price">$9.45</span>
+            </div>
+          </article>
+
+          <article class="special-card small-card">
+            <img src="asesst/imgs/special-03.jpg" alt="Burger" />
+            <div class="special-content">
+              <h2>
+                MEET, EAT & <br />
+                ENJOY THE
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                molestias a nesciunt.
+              </p>
+              <span class="price">$11.25</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about">
+      <div class="container about-container">
+        <div class="about-image">
+          <img src="asesst/imgs/about-bg.png" alt="About Burger" />
+        </div>
+        <div class="about-content">
+          <span class="section-subtitle">Concerning Our Food</span>
+          <h2 class="section-title">
+            WITH AMERICAN LOVE,<br />
+            FROM LOS ANGELES
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nihil
+            odit reprehenderit corrupti, aperiam iusto. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit.
+          </p>
+          <a href="#" class="about-btn">ORDER NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DELIVERY BANNER ===== -->
+    <section class="delivery-banner">
+      <div class="banner-overlay">
+        <div class="banner-content">
+          <span class="banner-subtitle">We Deliver Your Masterpiece!</span>
+          <h2>
+            QUICK & <br />
+            NUTRITIOUS DINNER
+          </h2>
+          <a href="menu.html" class="banner-btn">FULL MENU</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RECOMMENDED MENU ===== -->
+    <section class="recommended-menu">
+      <div class="container">
+        <div class="section-heading">
+          <span>Tasty & Crunchy</span>
+          <h2>RECOMMENDED TODAY</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+            laboriosam.
+          </p>
+        </div>
+
+        <section class="foods">
+          <!-- Card 1 -->
+          <article class="food-card">
+            <div class="food-image">
+              <img src="asesst/imgs/today-03.png" alt="Spaghetti" />
+            </div>
+            <div class="food-content">
+              <h3>SPAGHETTI BOLOGNESE</h3>
+              <span class="food-price">$35</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, temporibus.
+              </p>
+              <a href="#" class="food-btn">ORDER NOW</a>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="food-card">
+            <div class="food-image">
+              <img src="asesst/imgs/today-01.png" alt="Burger" />
+            </div>
+            <div class="food-content">
+              <h3>CHEESE BURGER</h3>
+              <span class="food-price">$25</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, temporibus.
+              </p>
+              <a href="#" class="food-btn">ORDER NOW</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="food-card">
+            <div class="food-image">
+              <img src="asesst/imgs/today-03.png" alt="Pasta" />
+            </div>
+            <div class="food-content">
+              <h3>ITALIAN PASTA</h3>
+              <span class="food-price">$30</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, temporibus.
+              </p>
+              <a href="#" class="food-btn">ORDER NOW</a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="food-card">
+            <div class="food-image">
+              <img src="asesst/imgs/today-02.png" alt="Pizza" />
+            </div>
+            <div class="food-content">
+              <h3>PEPPERONI PIZZA</h3>
+              <span class="food-price">$28</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, temporibus.
+              </p>
+              <a href="#" class="food-btn">ORDER NOW</a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="food-card">
+            <div class="food-image">
+              <img src="asesst/imgs/today-04.png" alt="French Fries" />
+            </div>
+            <div class="food-content">
+              <h3>FRENCH FRIES</h3>
+              <span class="food-price">$15</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, temporibus.
+              </p>
+              <a href="#" class="food-btn">ORDER NOW</a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="food-card">
+            <div class="food-image">
+              <img src="asesst/imgs/today-04.png" alt="Chicken Burger" />
+            </div>
+            <div class="food-content">
+              <h3>CHICKEN BURGER</h3>
+              <span class="food-price">$22</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, temporibus.
+              </p>
+              <a href="#" class="food-btn">ORDER NOW</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===== FEEDBACK ===== -->
+    <section class="feedback">
+      <div class="container">
+        <div class="section-heading">
+          <span>Testimonials</span>
+          <h2>CUSTOMERS FEEDBACK</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+            laboriosam.
+          </p>
+        </div>
+        <div class="testimonials">
+          <!-- Card 1 -->
+          <article class="testimonial-card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis.
+            </p>
+            <div class="customer">
+              <img
+                id="one-customer"
+                src="asesst/imgs/client-03.jpg"
+                alt="Customer"
+              />
+              <div>
+                <h3>MAHMAD AZADI</h3>
+                <span>Customer 😁</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="testimonial-card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis.
+            </p>
+            <div class="customer">
+              <img
+                id="two-customer"
+                src="asesst/imgs/client-02.jpg"
+                alt="Customer"
+              />
+              <div>
+                <h3>JOHN SMITH</h3>
+                <span>Food Lover</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="testimonial-card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis.
+            </p>
+            <div class="customer">
+              <img
+                id="three-customer"
+                src="asesst/imgs/client-01.jpg"
+                alt="Customer"
+              />
+              <div>
+                <h3>SARA WILSON</h3>
+                <span>Regular Customer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="testimonial-card">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis.
+            </p>
+            <div class="customer">
+              <img
+                id="Four-customer"
+                src="asesst/imgs/client-04.jpg"
+                alt="Customer"
+              />
+              <div>
+                <h3>MICHAEL JAMES</h3>
+                <span>Chef</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-logo">
+          <h2>BURGER</h2>
+          <p>Fresh Burgers, Crispy Fries and Delicious Meals Every Day.</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/about.html">About</a></li>
+            <li><a href="html/menu.html">Menu</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>Email : burger@gmail.com</p>
+          <p>Phone : +1 235 468 7890</p>
+          <p>Los Angeles, USA</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © Created By
+          <span style="color: #fff; font-family: monospace">Medi-proten</span>
+        </p>
+      </div>
+    </footer>
+    <script src="script/loader.js"></script>
+  </body>
+</html>

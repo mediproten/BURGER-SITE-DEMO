@@ -1,0 +1,501 @@
+:root {
+    --primary: #ff7a00;
+    --primary-hover: #ff9433;
+    --secondary: #1c1c1c;
+    --bg: #f6f6f6;
+    --card: #ffffff;
+    --text: #222222;
+    --gray: #777777;
+    --transition: 0.25s ease;
+    --shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.15);
+    --radius: 30px;
+}
+body {
+    background: white;
+    margin-inline: 2rem;
+    color: black;
+}
+a {
+    cursor: no-drop;
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.header {
+    background: var(--secondary);
+    border-radius: 0 0 40px 40px;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.logo-text {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    transition: var(--transition);
+}
+.logo-text:hover {
+    transform: scale(1.05);
+    color: var(--primary);
+}
+.logo-icon {
+    font-size: 34px;
+    color: var(--primary);
+    transition: var(--transition);
+}
+.logo-icon:hover {
+    transform: rotate(-10deg);
+}
+.menu-list {
+    display: flex;
+    gap: 35px;
+}
+.menu-list a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    position: relative;
+    transition: var(--transition);
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu-list a:hover,
+.menu-list a.active {
+    color: var(--primary);
+}
+.menu-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+.menu-list a:hover::after,
+.menu-list a.active::after {
+    transform: scaleX(1);
+}
+.order-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 700;
+    transition: var(--transition);
+    font-family: 'Short Stack', cursive;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+.order-button:hover {
+    background: var(--primary-hover);
+    transform: rotate(-2deg) scale(1.02);
+}
+main {
+    position: relative;
+}
+.menu-hero {
+    min-height: 45dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 8%;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.menu-hero::after {
+    content: '';
+    transition: .5s;
+    position: absolute;
+    inset: 0;
+    background: url('../asesst/imgs/kitchen-img.jpg') center/cover no-repeat;
+    filter: brightness(40%) saturate(1.1);
+    z-index: -1;
+    transform: scale(1.12);
+}
+.menu-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    max-width: 750px;
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.menu-title p {
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-family: Playpen Sans;
+}
+.menu-title h1 {
+    font-size: clamp(2.8rem, 8vw, 4.8rem);
+    line-height: 1.1;
+    font-weight: 900;
+    font-family: Gochi Hand;
+}
+.menu-title span {
+    font-size: 1.2rem;
+    max-width: 600px;
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.7;
+    font-family: Lilita One;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.menu-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0 3rem;
+}
+.menu-filter a {
+    padding: 14px 32px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+    border: 2px solid transparent;
+    background: var(--card);
+    color: var(--text);box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+}
+.menu-filter a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 122, 0, 0.15);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.menu-filter .active {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.05);
+    border-color: var(--primary);
+    box-shadow: 0 12px 24px rgba(255, 122, 0, 0.25);
+}
+.menu-filter .active:hover {
+    background: var(--card);
+    color: var(--text);
+    transform: scale(1.05) translateY(-3px);
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 5rem;
+}
+.food-card {
+    padding: 2rem 1.8rem;
+    border-radius: var(--radius);
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.food-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.2);
+}
+.food-card img {
+    width: 200px;
+    height: auto;
+    transition: var(--transition);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.08));
+    margin: auto;
+}
+.food-card .fun-burger-png {
+    width: 300px;
+}
+.food-card:hover img {
+    transform: scale(1.08);
+}
+.food-card h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-top: 0.2rem;
+    color: black;
+    font-family: Rock Salt;
+}
+.food-card p {
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    max-width: 220px;
+}
+.food-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+.food-bottom span {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+.food-bottom a {
+    padding: 10px 24px;
+    border-radius: 60px;
+    background: var(--secondary);
+    color: #fff;
+    font-weight: 700;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+.food-bottom a:hover {
+    background: var(--primary);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 122, 0, 0.2);
+}
+.drinks {
+    padding: 3rem 0 5rem;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+.section-title p {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+.section-title h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+}
+.drink-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    font-family: Short Stack;
+}
+.drink-card {
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.drink-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 44px -16px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+.drink-card img {
+    width: 130px;
+    transition: var(--transition);
+}
+.drink-card:hover img {
+    transform: scale(1.08) rotate(-3deg);
+}
+.drink-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.drink-card span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+.desserts {
+    padding: 3rem 0 5rem;
+    font-family: Short Stack;
+}
+.dessert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));gap: 2.5rem;
+    margin-top: 1rem;
+}
+.dessert-card {
+    padding: 2rem 1.8rem;
+    border-radius: var(--radius);
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dessert-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 50px -18px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+.dessert-card img {
+    width: 160px;
+    transition: var(--transition);
+}
+.dessert-card:hover img {
+    transform: scale(1.08) rotate(-4deg);
+}
+.dessert-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.dessert-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 200px;
+}
+.dessert-card span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 0.3rem;
+}
+.menu-cta {
+    font-family: Playpen Sans;
+    font-weight: 200;
+    padding: 5rem 2rem;
+    text-align: center;
+    border-radius: 60px;
+    margin: 4rem 0 5rem;
+    background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    box-shadow: var(--shadow);
+}
+.menu-cta h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    max-width: 700px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+.menu-cta p {
+    max-width: 550px;
+    line-height: 1.8;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+.menu-cta a {
+    padding: 16px 44px;
+    border-radius: 60px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    transition: var(--transition);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+.menu-cta a:hover {
+    background: var(--primary-hover);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 122, 0, 0.3);
+}
+@media (max-width: 900px) {
+    .navbar {
+        height: auto;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+    .menu-list {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu-grid,
+    .drink-grid,
+    .dessert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .menu-hero {
+        min-height: 35dvh;
+        padding: 2rem 5%;
+    }
+    .menu-title h1 {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 600px) {
+    body {
+        padding: 0 1rem;
+    }
+    .header {
+        padding: 0 1rem;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-list {
+        gap: 12px;
+    }
+    .menu-list a {
+        font-size: 13px;
+    }
+    .order-button {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+    .food-card img {
+        width: 150px;
+    }
+    .food-card .fun-burger-png {
+        width: 200px;
+    }
+    .drink-card img {
+        width: 100px;
+    }
+    .dessert-card img {
+        width: 120px;
+    }
+    .menu-cta {
+        padding: 3rem 1.5rem;
+    }
+}

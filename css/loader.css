@@ -1,0 +1,190 @@
+/* ===== LOADER ===== */
+.loader-wrapper {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(28, 28, 28, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.8s ease, visibility 0.8s ease, backdrop-filter 0.8s ease;
+}
+.loader-wrapper.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeInUp 0.6s ease forwards;
+}
+.loader-burger {
+    font-size: 5rem;
+    color: var(--primary);
+    animation: bounceBurger 1.2s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(255, 122, 0, 0.3));
+}
+.loader-text {
+    font-family: 'Short Stack', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.loader-text span {
+    color: var(--primary);
+}
+.loader-dots {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+.loader-dots span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    animation: dotPulse 1.4s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.3);
+}
+.loader-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loader-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.loader-dots span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.loader-dots span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.loader-progress {
+    width: 240px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.loader-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--primary-hover), var(--primary));
+    border-radius: 10px;
+    animation: progressLoad 2s ease-in-out forwards;
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.3);
+}
+.loader-subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+    margin-top: 0.2rem;
+    animation: pulseText 1.5s ease-in-out infinite;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+@keyframes bounceBurger {
+    0%, 100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-25px) scale(1.1) rotate(-8deg);
+    }
+}
+@keyframes dotPulse {
+    0%, 100% {
+        transform: scale(0.6);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes progressLoad {
+    0% {
+        width: 0%;
+    }
+    20% {
+        width: 20%;
+    }
+    50% {
+        width: 55%;
+    }
+    75% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes pulseText {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .loader-burger {
+        font-size: 3.5rem;
+    }
+    .loader-text {
+        font-size: 1.6rem;
+        letter-spacing: 4px;
+    }
+    .loader-dots span {
+        width: 14px;
+        height: 14px;
+    }
+    .loader-progress {
+        width: 180px;
+    }
+    .loader-subtext {
+        font-size: 0.75rem;
+    }
+}
+@media (max-width: 480px) {
+    .loader-burger {
+        font-size: 2.8rem;
+    }
+    .loader-text {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+    .loader-dots span {
+        width: 12px;
+        height: 12px;
+        gap: 0.5rem;
+    }
+    .loader-progress {
+        width: 150px;
+    }
+    .loader-subtext {
+        font-size: 0.7rem;
+    }
+}

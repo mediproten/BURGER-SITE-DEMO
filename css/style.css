@@ -1,0 +1,747 @@
+:root {
+    --primary: #ff7a00;
+    --primary-hover: #ff9433;
+    --transition: 0.3s ease;
+}
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+.header {
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.35)), url("../asesst/imgs/main.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.navbar {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.logo-text {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+.logo-text:hover {
+    transform: scale(1.05);
+}
+.logo-icon {
+    font-size: 34px;
+    color: var(--primary);
+    transition: var(--transition);
+}
+.logo-icon:hover {
+    transform: rotate(-10deg);
+}
+.menu-list {
+    display: flex;
+    gap: 35px;
+}
+.menu-list a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    transition: var(--transition);
+    text-decoration: none;
+}
+.menu-list a:hover {
+    color: var(--primary);
+}
+.menu-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+.menu-list a:hover::after {
+    transform: scaleX(1);
+}
+.order-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: var(--transition);
+    text-decoration: none;
+}
+.order-button:hover {
+    background: var(--primary-hover);
+    transform: rotateZ(-3deg);
+}
+.hero {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+}
+.hero-text {
+    max-width: 650px;
+}
+.small-title {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Gloria Hallelujah", cursive;
+}
+.main-title {
+    font-size: 70px;
+    line-height: 1.1;
+    font-weight: bolder;
+    letter-spacing: .05rem;
+    margin-bottom: 35px;
+    font-family: Gloria Hallelujah;
+}
+.hero-button {
+    display: inline-block;
+    padding: 18px 42px;
+    border-radius: 40px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: bold;
+    transition: var(--transition);
+    text-decoration: none;
+}
+.hero-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-5px);
+}
+.food-category {
+    width: 90%;
+    max-width: 1300px;
+    margin: 90px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.food-category-card {
+    background: #181818;
+    border: 1px solid #252525;
+    border-radius: 20px;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: .35s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
+}
+.food-category-card:hover {
+    background: #fca311;
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .28);
+}
+.food-category-card img {
+    width: 130px;
+    transition: .35s;
+}
+.food-category-card:hover img {
+    transform: scale(1.12) rotate(-5deg);
+}
+.food-category-card h3 {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.food-category-card:hover h3 {
+    color: #111;
+}
+.special-food {
+    background: url("../asesst/imgs/special-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+.special-food-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr .9fr;gap: 30px;
+}
+.special-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.special-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    cursor: pointer;
+}
+.special-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .45s ease;
+    filter: brightness(35%);
+}
+.special-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(50%);
+}
+.large-card {
+    height: 650px;
+}
+.small-card {
+    height: 310px;
+}
+.special-content {
+    position: absolute;
+    left: 45px;
+    bottom: 45px;
+    color: #fff;
+}
+.special-content h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: Geist Pixel;
+}
+.small-card .special-content h2 {
+    font-size: 30px;
+}
+.special-content p {
+    max-width: 420px;
+    color: #dddddd;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-family: Short Stack;
+    font-weight: 700;
+}
+.price {
+    display: block;
+    color: #fca311;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.menu-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #fca311;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: .35s;
+    text-decoration: none;
+}
+.menu-btn:hover {
+    background: #ffb52e;
+    transform: translateY(-4px);
+}
+.about {
+    background: #fff;
+    padding: 100px 0;
+}
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+.about-image img {
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+    transition: .4s;
+}
+.about-image img:hover {
+    transform: scale(1.03);
+}
+.about-content {
+    color: #111;
+}
+.section-subtitle {
+    display: inline-block;
+    color: #b22222;
+    font-size: 22px;
+    font-family: "Gloria Hallelujah", cursive;
+    margin-bottom: 15px;
+}
+.section-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-family: Kranky;
+}
+.about-content p {
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 35px;
+    font-family: Short Stack;
+    transition: .4s;
+}
+.about-content p:hover {
+    color: black;
+}
+.about-btn {
+    display: inline-block;
+    background: #fca311;
+    color: #fff;
+    padding: 16px 34px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: .35s;
+    text-decoration: none;
+}
+.about-btn:hover {
+    background: #ffb52e;
+    transform: scale(1.08);
+    color: #111;
+}
+.delivery-banner {
+    background: linear-gradient(rgba(0, 0, 0, .60), rgba(0, 0, 0, .60)), url("../asesst/imgs/delivery.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 140px 0;
+}
+.banner-overlay {
+    width: 100%;
+}
+.banner-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+.banner-subtitle {
+    display: block;
+    color: #fca311;
+    font-size: 24px;
+    margin-bottom: 18px;
+    font-family: "Gloria Hallelujah", cursive;
+}
+.banner-content h2 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+    font-family: Geist Pixel;
+}
+.banner-btn {
+    display: inline-block;
+    padding: 18px 42px;
+    background: #fca311;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: .35s;
+    font-family: Short Stack;
+    text-decoration: none;
+}
+.banner-btn:hover {
+    background: #ffb52e;
+    transform: translateY(-5px);
+}
+.recommended-menu {
+    background: #fff;
+    padding: 100px 0;
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: Londrina Solid;
+    letter-spacing: 2px;
+}
+.section-heading span {
+    display: block;
+    color: #b22222;
+    font-size: 22px;
+    font-family: "Gloria Hallelujah", cursive;
+    margin-bottom: 15px;
+}
+.section-heading h2 {color: #111;
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+.section-heading p {
+    color: #777;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+    transition: .4s;
+}
+.section-heading p:hover {
+    color: orange;
+}
+.foods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+.food-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .08);
+    transition: .35s;
+}
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .15);
+}
+.food-image {
+    flex-shrink: 0;
+}
+.food-image img {
+    width: 160px;
+    transition: .35s;
+}
+.food-card:hover img {
+    transform: scale(1.08);
+}
+.food-content {
+    flex: 1;
+}
+.food-content h3 {
+    color: #111;
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-family: Short Stack;
+}
+.food-price {
+    display: block;
+    color: #fca311;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.food-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    font-family: Geist Pixel;
+}
+.food-btn {
+    color: #111;
+    font-weight: bold;
+    transition: .3s;
+    font-family: Gochi Hand;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.food-btn:hover {
+    color: #fca311;
+}
+.feedback {
+    background: url("../asesst/imgs/special-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+.feedback .section-heading {
+    margin-bottom: 70px;
+}
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .08);
+    transition: .35s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .18);
+}
+.testimonial-card p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+    font-family: Geist Pixel;
+    transition: .4s;
+    font-weight: 700;
+}
+.testimonial-card p:hover {
+    color: rgb(201, 131, 0);
+}
+.customer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.customer img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fca311;
+}
+#two-customer {
+    border-color: #b22222;
+}
+#three-customer {
+    border-color: #0011ff;
+}
+#Four-customer {
+    border-color: #1b7704e0;
+}
+.customer h3 {
+    color: #111;
+    font-size: 20px;
+    margin-bottom: 6px;
+    font-family: Short Stack;
+}
+.customer span {
+    color: #888;
+    font-size: 15px;
+    font-family: Kranky;
+}
+.testimonial-card:hover .customer img {
+    transform: scale(1.08);
+    transition: .35s;
+}
+.testimonial-card:hover h3 {
+    color: #fca311;
+}
+.footer {
+    user-select: text;
+    background: #111;
+    color: #fff;
+    padding-top: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 50px;
+}
+.footer-logo h2 {
+    font-size: 38px;
+    color: var(--primary);
+    user-select: none;
+    text-shadow: 3.8px 4px 8px black;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+.footer-logo p {
+    color: #bdbdbd;
+    line-height: 1.9;
+    max-width: 380px;
+}
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 700;
+    list-style: none;
+    padding: 0;
+}
+.footer-links a {
+    color: #d5d5d5;
+    transition: .3s;text-decoration: none;
+}
+.footer-links a:hover {
+    color: var(--primary);
+    padding-left: 8px;
+}
+.footer-contact p {
+    color: #d5d5d5;
+    margin-bottom: 16px;
+    line-height: 1.8;
+    font-weight: 600;
+}
+.footer-bottom {
+    border-top: 1px solid #eea300;
+    padding: 25px 0;
+    text-align: center;
+    color: #999;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    gap: .4em;
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+    .food-category {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .special-food-container {
+        grid-template-columns: 1fr;
+    }
+    .large-card {
+        height: 500px;
+    }
+    .small-card {
+        height: 280px;
+    }
+    .about-container {
+        gap: 40px;
+    }
+    .main-title {
+        font-size: 58px;
+    }
+}
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        height: auto;
+        padding: 25px 0;
+    }
+    .menu-list {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero {
+        text-align: center;
+        justify-content: center;
+    }
+    .main-title {
+        font-size: 48px;
+    }
+    .food-category {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-image img {
+        max-width: 420px;
+    }
+    .foods {
+        grid-template-columns: 1fr;
+    }
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 38px;
+    }
+    .small-title {
+        font-size: 20px;
+    }
+    .hero-button {
+        padding: 16px 32px;
+    }
+    .food-category {
+        grid-template-columns: 1fr;
+    }
+    .food-category-card {
+        width: 100%;
+    }
+    .special-content {
+        left: 25px;
+        bottom: 25px;
+    }
+    .special-content h2 {
+        font-size: 28px;
+    }
+    .special-content p {
+        font-size: 15px;
+    }
+    .banner-content h2 {
+        font-size: 42px;
+    }
+    .section-title {
+        font-size: 34px;
+    }
+    .section-heading h2 {
+        font-size: 34px;
+    }
+    .food-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .food-image img {
+        width: 130px;
+    }
+    .customer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 24px;
+    }
+    .logo-icon {
+        font-size: 28px;
+    }
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .order-button {
+        width: 100%;
+        text-align: center;
+    }
+    .main-title {
+        font-size: 30px;
+    }
+    .hero-button {
+        width: 100%;
+        text-align: center;
+    }
+    .banner-content h2 {
+        font-size: 30px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-heading h2 {
+        font-size: 28px;
+    }
+    .about-btn,
+    .banner-btn,
+    .menu-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .food-card {
+        padding: 20px;
+    }
+    .footer {
+        text-align: center;
+    }
+}

@@ -1,0 +1,61 @@
+/* ==========================
+        RESET
+========================== */
+html {
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:#fff;
+    overflow-x:hidden;
+    user-select:none;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+
+
+/* ==========================
+        VARIABLES
+========================== */
+
+:root{
+
+    --primary:#fca311;
+    --primary-hover:#ffb52e;
+
+    --dark:#111111;
+    --white:#ffffff;
+
+    --gray:#cfcfcf;
+
+    --shadow:0 10px 30px rgba(0,0,0,.15);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
