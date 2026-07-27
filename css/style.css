@@ -744,4 +744,11 @@
     .footer {
         text-align: center;
     }
+    .small-card .special-content h2 {
+    font-size: 30px;
+    
+    
+    margin-bottom: 20px;
+    transform: translateY(40%);
+}
 }
